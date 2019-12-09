@@ -6,6 +6,7 @@ import {
   Heading,
   Text
 } from 'rebass'
+import TableOfContents from '../components/table-of-contents'
 
 <Box
   fontSize={4}
@@ -26,25 +27,5 @@ import {
   color='darkText'>
 
   #### Table of Contents
-  
-  <StaticQuery
-    query={graphql`
-      query HeadingQuery {
-        allMdx {
-          edges {
-            node {
-              id
-              frontmatter {
-                title
-              }
-            }
-          }
-        }
-      }
-    `}
-    render={data => (
-      {data}
-    )}
-  />
-)
+  <TableOfContents />
 </Box>
