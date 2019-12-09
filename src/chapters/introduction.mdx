@@ -1,3 +1,50 @@
-# The Product Design Playbook
+import { StaticQuery, graphql } from "gatsby"
+import {
+  Box,
+  Card,
+  Image,
+  Heading,
+  Text
+} from 'rebass'
 
-#### Growing design teams and running a business
+<Box
+  fontSize={4}
+  width={[ 1 ]}
+  color='darkText'>
+
+  # Design as a Business
+  ### Guide to creating a Design team that learns how design impacts the organization
+
+  #### Motivation
+  I joined Robin as a product designer summer of 2017. As the company grew, Design needed to scale alongside it. Design at the time had no exposure to the business strategy. Without understanding where the product and business were headed it made it difficult to help see where Design can truly help meet those goals. 
+</Box>
+
+<Box
+  fontSize={4}
+  width={[ 1 ]}
+  background="yellow"
+  color='darkText'>
+
+  #### Table of Contents
+  
+  <StaticQuery
+    query={graphql`
+      query HeadingQuery {
+        allMdx {
+          edges {
+            node {
+              id
+              frontmatter {
+                title
+              }
+            }
+          }
+        }
+      }
+    `}
+    render={data => (
+      {data}
+    )}
+  />
+)
+</Box>

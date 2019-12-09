@@ -1,24 +1,22 @@
 import React from "react"
 import styled from "@emotion/styled"
 import { ThemeProvider } from 'theme-ui'
-import { toTheme } from '@theme-ui/typography'
-import typography from "../utils/typography"
 import Grid from 'react-css-grid'
+import theme from "../gatsby-plugin-theme-ui"
 import Introduction from "../chapters/introduction"
-
-const theme = toTheme(typography)
+import {Box} from "rebass"
 
 export default props => (
   <ThemeProvider theme={theme}>
-    <Grid
-      width={800}
-      gap={16}>
-        <Introduction />
-    </Grid>
+    <Box
+  sx={{
+    maxWidth: 600,
+    mx: 'auto',
+    px: 3,
+  }}>
+    <Introduction />
+</Box>
+    
   </ThemeProvider>
 )
-
-// const Container = styled.div({
-//   max
-// })
  
